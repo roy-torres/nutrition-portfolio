@@ -157,7 +157,10 @@ function renderProfile() {
         el("h1", { className: "profile-title", id: "profile-heading", text: profile.name }),
         el("p", { className: "profile-lede", text: profile.lede }),
         el("p", { className: "price" }, priceBlock(profile.price, profile.compareAt)),
-        el("a", { className: "text-link", href: "#formula", text: "Read the formula" }),
+        el("div", { className: "profile-actions" }, [
+          el("a", { className: "profile-cta", href: profile.url, text: "View on LT Shop" }),
+          el("a", { className: "text-link", href: "#formula", text: "Read the formula" }),
+        ]),
       ]),
       el("figure", { className: "profile-photo" }, [
         el("img", {
