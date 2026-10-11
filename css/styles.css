@@ -165,13 +165,13 @@ img {
   display: flex;
   align-items: center;
   gap: 16px;
-  min-height: 72px;
+  min-height: 64px;
 }
 
 .logo {
   display: inline-flex;
   align-items: center;
-  min-height: 44px;
+  min-height: 48px;
   margin-right: auto;
   color: var(--ink);
   font-size: 18px;
@@ -184,8 +184,8 @@ img {
   order: 3;
   align-items: center;
   justify-content: center;
-  min-width: 44px;
-  min-height: 44px;
+  min-width: 48px;
+  min-height: 48px;
   padding: 0 16px;
   border: 1px solid var(--ink);
   border-radius: var(--radius);
@@ -213,8 +213,8 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 44px;
-  min-height: 44px;
+  min-width: 48px;
+  min-height: 48px;
   border: 1px solid var(--ink);
   border-radius: var(--radius);
   background: transparent;
@@ -243,14 +243,14 @@ img {
 .theme-icons {
   display: grid;
   place-items: center;
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
 }
 
 .theme-icon {
   grid-area: 1 / 1;
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
 }
 
 .theme-icon-moon {
@@ -275,7 +275,7 @@ html[data-theme="dark"] .theme-icon-moon {
 .site-nav a {
   display: inline-flex;
   align-items: center;
-  min-height: 44px;
+  min-height: 48px;
   padding: 0 16px;
   color: var(--ink);
   font-size: 16px;
@@ -323,7 +323,7 @@ html[data-theme="dark"] .theme-icon-moon {
 
 .profile {
   background: var(--studio);
-  scroll-margin-top: 72px;
+  scroll-margin-top: 64px;
 }
 
 .profile-grid {
@@ -441,7 +441,7 @@ html[data-theme="dark"] .theme-icon-moon {
 }
 
 .band {
-  scroll-margin-top: 88px;
+  scroll-margin-top: 64px;
   padding-block: 64px;
 }
 
