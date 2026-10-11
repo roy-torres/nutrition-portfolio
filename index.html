@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Life Time — Power Creatine</title>
+    <meta name="description" content="A Life Time nutrition portfolio for LTH Power Creatine Monohydrate, with Flex Whey, Power Creatine, and Glow Omega-3 from Daily Essentials.">
+    <meta name="theme-color" content="#e4e4e4">
+    <script>
+      (function () {
+        var stored = null;
+        try {
+          stored = localStorage.getItem("theme");
+        } catch (error) {}
+        var theme =
+          stored === "dark" || stored === "light"
+            ? stored
+            : window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+        document.documentElement.setAttribute("data-theme", theme);
+        var themeColor = document.querySelector('meta[name="theme-color"]');
+        if (themeColor) {
+          themeColor.setAttribute("content", theme === "dark" ? "#141614" : "#e4e4e4");
+        }
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <a class="skip" href="#profile">Skip to content</a>
+    <header class="site-header">
+      <div class="section-wrap header-bar">
+        <a class="logo" href="#profile">Life Time</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav id="site-nav" class="site-nav" aria-label="Page">
+          <a href="#formula">Formula</a>
+          <a href="#essentials">Essentials</a>
+          <a href="#use">How to use</a>
+          <a class="nav-cta" id="shop-link" href="https://shop.lifetime.life/lth-power-creatine-monohydrate">View on LT Shop</a>
+        </nav>
+        <label class="theme-toggle">
+          <input type="checkbox" role="switch">
+          <span class="visually-hidden">Dark mode</span>
+          <span class="theme-icons" aria-hidden="true">
+            <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.75"></circle>
+              <path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" d="M12 2.5v2.2M12 19.3V21.5M2.5 12h2.2M19.3 12H21.5M5.05 5.05l1.55 1.55M17.4 17.4l1.55 1.55M18.95 5.05l-1.55 1.55M6.6 17.4l-1.55 1.55"></path>
+            </svg>
+            <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M21 14.5A8.5 8.5 0 0 1 9.5 3a7 7 0 1 0 11.5 11.5z"></path>
+            </svg>
+          </span>
+        </label>
+      </div>
+    </header>
+    <main>
+      <noscript>
+        <p class="noscript">Enable JavaScript to build this page from the Life Time product details.</p>
+      </noscript>
+      <section id="profile" class="profile" aria-labelledby="profile-heading"></section>
+      <section id="formula" class="band" aria-labelledby="formula-heading"></section>
+      <section id="essentials" class="band" aria-labelledby="essentials-heading"></section>
+      <section id="use" class="band" aria-labelledby="use-heading"></section>
+    </main>
+    <footer class="site-footer"></footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
