@@ -342,6 +342,7 @@ html[data-theme="dark"] .theme-icon-moon {
 
 .profile-title {
   margin-block: calc(16px + var(--cap-overshoot)) 24px;
+  margin-inline-start: -0.06em;
   font-size: clamp(4.5rem, 9vw, 7.5rem);
   font-weight: 600;
   letter-spacing: -0.045em;
