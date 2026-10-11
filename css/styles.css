@@ -880,7 +880,7 @@ html[data-theme="dark"] .site-footer {
   .segment button,
   .essential-photo,
   .theme-icon {
-    transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease, opacity 160ms ease;
+    transition: background-color 180ms ease-out, color 180ms ease-out, border-color 180ms ease-out, opacity 160ms ease-out;
   }
 }
 
