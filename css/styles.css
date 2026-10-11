@@ -20,6 +20,8 @@
   --footer-cta-text: var(--ink);
   --footer-cta-hover: #ffffff;
   --font: "Outfit", "Avenir Next", "Segoe UI", sans-serif;
+  /* Outfit's cap-height metric sits this far below its drawn capitals, so trimmed large type needs it back. */
+  --cap-overshoot: 0.027em;
   --content: 1120px;
   --radius: 2px;
 }
@@ -83,6 +85,29 @@ ul {
 
 a {
   color: inherit;
+}
+
+.profile-kicker,
+.profile-title,
+.profile-lede,
+.price-now,
+.price-was,
+.spec-value,
+.spec-label,
+.band h2,
+.site-footer h2,
+.prose,
+.benefit-detail,
+.essential-name,
+.essential-role,
+.essential-price,
+.essential-points li,
+.ingredient h3,
+.servings h3,
+.servings-days,
+.servings-note,
+.fine-print {
+  text-box: trim-both cap alphabetic;
 }
 
 img {
@@ -316,7 +341,7 @@ html[data-theme="dark"] .theme-icon-moon {
 }
 
 .profile-title {
-  margin-block: 16px 24px;
+  margin-block: calc(16px + var(--cap-overshoot)) 24px;
   font-size: clamp(4.5rem, 9vw, 7.5rem);
   font-weight: 600;
   letter-spacing: -0.045em;
@@ -417,7 +442,7 @@ html[data-theme="dark"] .theme-icon-moon {
 
 .band {
   scroll-margin-top: 88px;
-  padding-top: 64px;
+  padding-block: 64px;
 }
 
 #formula {
@@ -432,10 +457,6 @@ html[data-theme="dark"] .theme-icon-moon {
   background: var(--mist);
 }
 
-#use {
-  padding-bottom: 64px;
-}
-
 .band h2,
 .site-footer h2 {
   font-size: 32px;
@@ -445,11 +466,7 @@ html[data-theme="dark"] .theme-icon-moon {
 }
 
 .band h2 {
-  margin-bottom: 32px;
-}
-
-#essentials h2 {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .formula-grid {
@@ -463,10 +480,6 @@ html[data-theme="dark"] .theme-icon-moon {
   display: flex;
   flex-direction: column;
   gap: 16px;
-}
-
-.formula-copy h2 {
-  margin-bottom: 24px;
 }
 
 .prose {
@@ -619,7 +632,7 @@ html[data-theme="dark"] .theme-icon-moon {
 .essential-points {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
   margin-bottom: 16px;
 }
 
@@ -687,7 +700,7 @@ html[data-theme="dark"] .theme-icon-moon {
 
 .servings-days {
   display: block;
-  margin-top: 32px;
+  margin-top: calc(32px + var(--cap-overshoot));
   font-size: 48px;
   font-weight: 600;
   letter-spacing: -0.03em;
@@ -744,7 +757,7 @@ html[data-theme="dark"] .site-footer {
 }
 
 .fine-print + .fine-print {
-  margin-top: 16px;
+  margin-top: 24px;
 }
 
 .noscript {
@@ -821,14 +834,11 @@ html[data-theme="dark"] .site-footer {
   }
 
   .band {
-    padding-top: 48px;
-  }
-
-  #use {
-    padding-bottom: 48px;
+    padding-block: 48px;
   }
 
   .essential-button {
+    align-items: start;
     grid-template-columns: 72px minmax(0, 1fr) auto;
     grid-template-areas:
       "photo copy mark"
